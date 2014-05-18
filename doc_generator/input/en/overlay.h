@@ -208,6 +208,15 @@ int ShowAllVisual();
 //! @return 1 if successfull, 0 if not.
 int HideAllVisual();
 
+//! Reads the game's framerate.
+//! @return Returns the framerate, -1 if an error occured.
+int GetFrameRate();
+//! Reads the game's resolution.
+//! @param[out] width Width of the game.
+//! @param[out] height Height of the game.
+//! @return 1 if successfull, 0 if not.
+int GetScreenSpecs(int& width, int& height);
+
 //! Routine to initialize the API, but it does not have to be explicitly called because it's initialized internally.
 //! @return 1 if successfull, 0 if not.
 int  Init();

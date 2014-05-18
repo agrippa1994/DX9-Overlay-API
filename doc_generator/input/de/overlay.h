@@ -208,6 +208,16 @@ int ShowAllVisual();
 //! @return 1 wenn erfolgreich, 0 wenn nicht.
 int HideAllVisual();
 
+
+//! Liest die aktuelle Framerate aus.
+//! @return Framerate, -1 bei einem Fehler.
+int GetFrameRate();
+//! Gibt die aktuelle Auflösung des Spieles / Programmes über zwei Referenzen zurück.
+//! @param[out] width Breite.
+//! @param[out] height Höhe.
+//! @return 1, wenn erfolgreich, sonst 0.
+int GetScreenSpecs(int& width, int& height);
+
 //! Initialisiert die API, muss aber nicht aufgerufen werden, da sie intern aufgerufen wird.
 //! @return 1 wenn erfolgreich, 0 wenn nicht.
 int  Init();
