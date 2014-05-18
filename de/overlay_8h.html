@@ -103,6 +103,10 @@ Funktionen</h2></td></tr>
 <tr class="separator:a6d169ae9b434211e6b0f1103b36900f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5162dd9e6e7a838ff0cb29058c281e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="overlay_8h.html#ad5162dd9e6e7a838ff0cb29058c281e1">HideAllVisual</a> ()</td></tr>
 <tr class="separator:ad5162dd9e6e7a838ff0cb29058c281e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8084be20cf82e8c72ac7b249f0a2b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="overlay_8h.html#a9f8084be20cf82e8c72ac7b249f0a2b5">GetFrameRate</a> ()</td></tr>
+<tr class="separator:a9f8084be20cf82e8c72ac7b249f0a2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443a57a74f7351e7236e8805c627f59d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="overlay_8h.html#a443a57a74f7351e7236e8805c627f59d">GetScreenSpecs</a> (int &amp;width, int &amp;height)</td></tr>
+<tr class="separator:a443a57a74f7351e7236e8805c627f59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cc9377888d6702569639b1e8b67cc03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="overlay_8h.html#a9cc9377888d6702569639b1e8b67cc03">Init</a> ()</td></tr>
 <tr class="separator:a9cc9377888d6702569639b1e8b67cc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac795b80115144e1e8944158f8b1c1aeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="overlay_8h.html#ac795b80115144e1e8944158f8b1c1aeb">SetParam</a> (const char *_szParamName, const char *_szParamValue)</td></tr>
@@ -467,6 +471,56 @@ Funktionen</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Zerstört alle Overlays. </p><dl class="section return"><dt>Rückgabe</dt><dd>1 wenn erfolgreich, 0 wenn nicht. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f8084be20cf82e8c72ac7b249f0a2b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetFrameRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Liest die aktuelle Framerate aus. </p><dl class="section return"><dt>Rückgabe</dt><dd>Framerate, -1 bei einem Fehler. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a443a57a74f7351e7236e8805c627f59d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetScreenSpecs </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gibt die aktuelle Auflösung des Spieles / Programmes über zwei Referenzen zurück. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">width</td><td>Breite. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">height</td><td>Höhe. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>1, wenn erfolgreich, sonst 0. </dd></dl>
 
 </div>
 </div>
