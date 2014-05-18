@@ -1,0 +1,128 @@
+\begin{theindex}
+
+  \item {Box\+Create}
+    \subitem {overlay.\+h}, 4
+  \item {Box\+Destroy}
+    \subitem {overlay.\+h}, 4
+  \item {Box\+Set\+Border}
+    \subitem {overlay.\+h}, 4
+  \item {Box\+Set\+Border\+Color}
+    \subitem {overlay.\+h}, 4
+  \item {Box\+Set\+Color}
+    \subitem {overlay.\+h}, 5
+  \item {Box\+Set\+Height}
+    \subitem {overlay.\+h}, 5
+  \item {Box\+Set\+Pos}
+    \subitem {overlay.\+h}, 5
+  \item {Box\+Set\+Shown}
+    \subitem {overlay.\+h}, 6
+  \item {Box\+Set\+Width}
+    \subitem {overlay.\+h}, 6
+
+  \indexspace
+
+  \item {Destroy\+All\+Visual}
+    \subitem {overlay.\+h}, 6
+
+  \indexspace
+
+  \item {Hide\+All\+Visual}
+    \subitem {overlay.\+h}, 6
+
+  \indexspace
+
+  \item {Image\+Create}
+    \subitem {overlay.\+h}, 7
+  \item {Image\+Destroy}
+    \subitem {overlay.\+h}, 7
+  \item {Image\+Set\+Align}
+    \subitem {overlay.\+h}, 7
+  \item {Image\+Set\+Pos}
+    \subitem {overlay.\+h}, 7
+  \item {Image\+Set\+Rotation}
+    \subitem {overlay.\+h}, 9
+  \item {Image\+Set\+Shown}
+    \subitem {overlay.\+h}, 9
+  \item {Init}
+    \subitem {overlay.\+h}, 9
+
+  \indexspace
+
+  \item {Line\+Create}
+    \subitem {overlay.\+h}, 9
+  \item {Line\+Destroy}
+    \subitem {overlay.\+h}, 11
+  \item {Line\+Set\+Color}
+    \subitem {overlay.\+h}, 11
+  \item {Line\+Set\+Pos}
+    \subitem {overlay.\+h}, 11
+  \item {Line\+Set\+Shown}
+    \subitem {overlay.\+h}, 12
+  \item {Line\+Set\+Width}
+    \subitem {overlay.\+h}, 12
+
+  \indexspace
+
+  \item {overlay.\+h}, 3
+    \subitem {Box\+Create}, 4
+    \subitem {Box\+Destroy}, 4
+    \subitem {Box\+Set\+Border}, 4
+    \subitem {Box\+Set\+Border\+Color}, 4
+    \subitem {Box\+Set\+Color}, 5
+    \subitem {Box\+Set\+Height}, 5
+    \subitem {Box\+Set\+Pos}, 5
+    \subitem {Box\+Set\+Shown}, 6
+    \subitem {Box\+Set\+Width}, 6
+    \subitem {Destroy\+All\+Visual}, 6
+    \subitem {Hide\+All\+Visual}, 6
+    \subitem {Image\+Create}, 7
+    \subitem {Image\+Destroy}, 7
+    \subitem {Image\+Set\+Align}, 7
+    \subitem {Image\+Set\+Pos}, 7
+    \subitem {Image\+Set\+Rotation}, 9
+    \subitem {Image\+Set\+Shown}, 9
+    \subitem {Init}, 9
+    \subitem {Line\+Create}, 9
+    \subitem {Line\+Destroy}, 11
+    \subitem {Line\+Set\+Color}, 11
+    \subitem {Line\+Set\+Pos}, 11
+    \subitem {Line\+Set\+Shown}, 12
+    \subitem {Line\+Set\+Width}, 12
+    \subitem {Set\+Param}, 12
+    \subitem {Show\+All\+Visual}, 13
+    \subitem {Text\+Create}, 13
+    \subitem {Text\+Destroy}, 13
+    \subitem {Text\+Set\+Color}, 13
+    \subitem {Text\+Set\+Pos}, 14
+    \subitem {Text\+Set\+Shadow}, 14
+    \subitem {Text\+Set\+Shown}, 14
+    \subitem {Text\+Set\+String}, 15
+    \subitem {Text\+Update}, 15
+
+  \indexspace
+
+  \item {Set\+Param}
+    \subitem {overlay.\+h}, 12
+  \item {Show\+All\+Visual}
+    \subitem {overlay.\+h}, 13
+
+  \indexspace
+
+  \item {Text\+Create}
+    \subitem {overlay.\+h}, 13
+  \item {Text\+Destroy}
+    \subitem {overlay.\+h}, 13
+  \item {Text\+Set\+Color}
+    \subitem {overlay.\+h}, 13
+  \item {Text\+Set\+Pos}
+    \subitem {overlay.\+h}, 14
+  \item {Text\+Set\+Shadow}
+    \subitem {overlay.\+h}, 14
+  \item {Text\+Set\+Shown}
+    \subitem {overlay.\+h}, 14
+  \item {Text\+Set\+String}
+    \subitem {overlay.\+h}, 15
+  \item {Text\+Update}
+    \subitem {overlay.\+h}, 15
+
+\end{theindex}

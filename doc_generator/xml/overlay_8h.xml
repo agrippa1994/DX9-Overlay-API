@@ -1,0 +1,1546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="overlay_8h" kind="file">
+    <compoundname>overlay.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextCreate</definition>
+        <argsstring>(const char *Font, int FontSize, bool bBold, bool bItalic, int x, int y, unsigned int color, const char *text, bool bShadow, bool bShow)</argsstring>
+        <name>TextCreate</name>
+        <param>
+          <type>const char *</type>
+          <declname>Font</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>FontSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bBold</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bItalic</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShadow</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erstellt einen Text mit den angegebenen Parametern. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name einer Font </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FontSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Größe der Font </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bBold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte die Font fett sein? </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bItalic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte die Font kursiv sein? </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position X skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position Y skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Farbe des Overlays (ARGB-Code) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text des Overlays </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShadow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Schwarzer Schatten um das Overlay? </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte der Text nach dem Funktionsaufruf gezeichnet werden? </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Gibt die ID des Overlays zurück, welche für alle weitern Funktionen benötigt wird. Gibt -1 bei einem Fehler zurück. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a121d328ea31d906cd758cb36afe0ca44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextDestroy</definition>
+        <argsstring>(int ID)</argsstring>
+        <name>TextDestroy</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zerstört einen Text. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TextID welche zerstört werden sollte. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a764775380525863ff5e829fe691c6dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextSetShadow</definition>
+        <argsstring>(int id, bool b)</argsstring>
+        <name>TextSetShadow</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktiviert / Deaktiviert den Schatten eines Textes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Overlay-ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true für das Aktivieren, false für das Deaktivieren </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ac8639c6683eac1f36ca538050a318bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextSetShown</definition>
+        <argsstring>(int id, bool b)</argsstring>
+        <name>TextSetShown</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktiviert / Deaktiviert das Overlay temporär. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Overlay-ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true für das Aktivieren, false für das Deaktivieren </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1aff125af852bc77b81f976af1d69a13dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextSetColor</definition>
+        <argsstring>(int id, unsigned int color)</argsstring>
+        <name>TextSetColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt eine neue Farbe für den Text <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Overlay-ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Die neue Farbe als ARGB-Code </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ab4bfa9dd0baec6930e537def549a3c3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextSetPos</definition>
+        <argsstring>(int id, int x, int y)</argsstring>
+        <name>TextSetPos</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt den Text an eine angegebene Position <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Overlay-ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a852c9218ba58b6f69528688cd66b8c8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextSetString</definition>
+        <argsstring>(int id, const char *str)</argsstring>
+        <name>TextSetString</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzen eines neues Textes für das Text-Overlay. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Overlay-ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neuer Text als String </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1addfce5c105d87e06757cfb0767320509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TextUpdate</definition>
+        <argsstring>(int id, const char *Font, int FontSize, bool bBold, bool bItalic)</argsstring>
+        <name>TextUpdate</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>Font</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>FontSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bBold</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bItalic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktualisieren des Overlays mit neuen Daten. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Overlay-ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neue Font als String </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FontSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Größe der Font </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bBold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte der Text fett sein? </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bItalic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte der Text kursiv sein? </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxCreate</definition>
+        <argsstring>(int x, int y, int w, int h, unsigned int dwColor, bool bShow)</argsstring>
+        <name>BoxCreate</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>dwColor</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erstellt eine Box mit den angegebenen Paramtern. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position X skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position Y skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Breite der Box, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Höhe der Box, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dwColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Farbe der Box </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte die Box nach dem Erstellen gezeichnet werden? </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Gibt die ID der Box zurück, -1 bei einem Fehler! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a966506bc79f1c1ea7e861cf3d8e9fee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxDestroy</definition>
+        <argsstring>(int id)</argsstring>
+        <name>BoxDestroy</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zerstört eine Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a24c6ea42318df06bb620bfe31f4ee850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetShown</definition>
+        <argsstring>(int id, bool bShown)</argsstring>
+        <name>BoxSetShown</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShown</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktiviert / Deaktiviert eine Box temporär. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShown</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, falls die Box gezeigt werden soll, false wenn nicht. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ac9f69a976130f0a9cadd27829c3c8c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetBorder</definition>
+        <argsstring>(int id, int height, bool bShown)</argsstring>
+        <name>BoxSetBorder</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShown</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt eine Umrandung für die Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Höhe der Umrandung. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShown</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, falls die Umrandung gezeigt werden soll, false wenn nicht. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a14a6078fe4330b26276a88527e4a582f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetBorderColor</definition>
+        <argsstring>(int id, unsigned int dwColor)</argsstring>
+        <name>BoxSetBorderColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>dwColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Farbe der Umrandung einer Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dwColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Farbe für die Umrandung (ARGB-Code) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a80246a06a1be196a27087a7640061935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetColor</definition>
+        <argsstring>(int id, unsigned int dwColor)</argsstring>
+        <name>BoxSetColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>dwColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Farbe der Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dwColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Farbe der Box (ARGB-Code) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a1af1096819d6a555846ef248a8d79b32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetHeight</definition>
+        <argsstring>(int id, int height)</argsstring>
+        <name>BoxSetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Höhe einer Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Höhe der Box. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ac90a1a2d169f8551cc35158fa6f30d69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetPos</definition>
+        <argsstring>(int id, int x, int y)</argsstring>
+        <name>BoxSetPos</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Position einer Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position-X, skaliert auf einer Auflösung von 800-600. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position-Y, skaliert auf einer Auflösung von 800-600. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ad4db7ad8eb170d5e5d9d6a5cf76c18d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxSetWidth</definition>
+        <argsstring>(int id, int width)</argsstring>
+        <name>BoxSetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Breite einer Box. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Box </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Breite der Box </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ae873e234f72f2700241cc50d060790eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LineCreate</definition>
+        <argsstring>(int x1, int y1, int x2, int y2, int width, unsigned int color, bool bShow)</argsstring>
+        <name>LineCreate</name>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erstellt eine Linie mit den angegebenen Parametern. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position des zweiten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position des zweiten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Breite der Linie in Pixeln. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Farbe der Linie. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sollte die Linie direkt nach dem Erstellen gezeichnet werden? </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Gibt die ID der erstellen Linie zurück. -1 bei einem Fehler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1aa0a1b6f4a7942adcd03bd9bc903d3037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LineDestroy</definition>
+        <argsstring>(int id)</argsstring>
+        <name>LineDestroy</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zerstört eine Linie. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linien-Objekt, welches zerstört werden soll. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a6396732d1bf250610d1fc3410014d494" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LineSetShown</definition>
+        <argsstring>(int id, bool bShown)</argsstring>
+        <name>LineSetShown</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShown</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktiviert / Deaktiviert eine Linie temporär. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Linie </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShown</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, falls die Linie gezeigt werden soll, false wenn nicht. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ae873e234f72f2700241cc50d060790eb" kindref="member">LineCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a78fffda532ef70476d2c5009d726027d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LineSetColor</definition>
+        <argsstring>(int id, unsigned int color)</argsstring>
+        <name>LineSetColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Farbe einer Linie. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Linie </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Farbe der Linie (ARGB-Code) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ae873e234f72f2700241cc50d060790eb" kindref="member">LineCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1afef34f9d01699f3871c08b17a24061db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LineSetWidth</definition>
+        <argsstring>(int id, int width)</argsstring>
+        <name>LineSetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Breite einer Linie. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Linie </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Breite der Linie in Pixeln. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ae873e234f72f2700241cc50d060790eb" kindref="member">LineCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1acd7420990ec943ee90a20e9cae44c65f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LineSetPos</definition>
+        <argsstring>(int id, int x1, int y1, int x2, int y2)</argsstring>
+        <name>LineSetPos</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Position einer Linie <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID der Linie </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position des zweiten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position des zweiten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1ae873e234f72f2700241cc50d060790eb" kindref="member">LineCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ImageCreate</definition>
+        <argsstring>(const char *path, int x, int y, int rotation, int align, bool bShow)</argsstring>
+        <name>ImageCreate</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>align</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erstellt ein Bild mit den angegebenen Paramtern. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Relativer oder absoluter Pfad zur einer Bild-Datei. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation des Bildes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">align</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Platzierung des Bildes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, falls das Bild beim initialisieren gezeichnet werden soll, false wenn nicht. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Gibt die ID zurück, -1 bei einem Fehler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ad9b2885be1737107c306dd7a28d0fdfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ImageDestroy</definition>
+        <argsstring>(int id)</argsstring>
+        <name>ImageDestroy</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zerstört ein Bild. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des Bildes, welches zerstört werden soll. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" kindref="member">ImageCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a2c86b5535fca61b62cb227bbd8512cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ImageSetShown</definition>
+        <argsstring>(int id, bool bShown)</argsstring>
+        <name>ImageSetShown</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bShown</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktiviert / Deaktiviert ein Bild temporär. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des Bildes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bShown</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, falls das Bild gezeigt werden soll, false wenn nicht. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" kindref="member">ImageCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a4636bfbe41107d038b86e9b210adbbe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ImageSetAlign</definition>
+        <argsstring>(int id, int align)</argsstring>
+        <name>ImageSetAlign</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>align</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ordnet das Bild zu. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des Bildes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">align</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zuordnung. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" kindref="member">ImageCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1acf7a6d134cb1934051cc1f5d5d79c002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ImageSetPos</definition>
+        <argsstring>(int id, int x, int y)</argsstring>
+        <name>ImageSetPos</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Position eines Bildes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des Bildes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position des ersten Punktes, skaliert auf einer Auflösung von 800 x 600 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" kindref="member">ImageCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ab993631e6cab7e55ae27153f0fa92f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ImageSetRotation</definition>
+        <argsstring>(int id, int rotation)</argsstring>
+        <name>ImageSetRotation</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Rotation eines Bildes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des Bildes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation des Bildes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+<simplesect kind="see"><para><ref refid="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" kindref="member">ImageCreate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="199" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a16f7c09ae2830c97022b4a593b3a6c53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DestroyAllVisual</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyAllVisual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zerstört alle Overlays. <simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="203" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a6d169ae9b434211e6b0f1103b36900f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ShowAllVisual</definition>
+        <argsstring>()</argsstring>
+        <name>ShowAllVisual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zeigt alle Overlays. <simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ad5162dd9e6e7a838ff0cb29058c281e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HideAllVisual</definition>
+        <argsstring>()</argsstring>
+        <name>HideAllVisual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Versteckt alle Overlays. <simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1a9cc9377888d6702569639b1e8b67cc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialisiert die API, muss aber nicht aufgerufen werden, da sie intern aufgerufen wird. <simplesect kind="return"><para>1 wenn erfolgreich, 0 wenn nicht. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="overlay_8h_1ac795b80115144e1e8944158f8b1c1aeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetParam</definition>
+        <argsstring>(const char *_szParamName, const char *_szParamValue)</argsstring>
+        <name>SetParam</name>
+        <param>
+          <type>const char *</type>
+          <declname>_szParamName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>_szParamValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setzt die Paramter für die API.<linebreak/>
+Mögliche Parameter für &apos;_szParamName&apos;:<linebreak/>
+&quot;use_window&quot; Die API benutzt den Fensternamen, um einen Prozess zu finden. Standardmäßig auf 0.<linebreak/>
+&quot;process&quot; Name des Prozesses, wird ignoriert, wenn use_window auf 1 ist.<linebreak/>
+&quot;window&quot; Name des Fensters.<linebreak/>
+<linebreak/>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_szParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Schlüsselparameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">_szParamValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wert für den ersten Parameter. Diese Funktion muss vor jeder anderen API-Funktion aufgerufen werden! </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h" line="223" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ab588cda26c065b09b694d9e503678a2a" kindref="member">TextCreate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Font,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>FontSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bBold,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bItalic,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShadow,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShow);</highlight></codeline>
+<codeline lineno="18"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a121d328ea31d906cd758cb36afe0ca44" kindref="member">TextDestroy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID);</highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a764775380525863ff5e829fe691c6dcc" kindref="member">TextSetShadow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ac8639c6683eac1f36ca538050a318bf6" kindref="member">TextSetShown</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1aff125af852bc77b81f976af1d69a13dd" kindref="member">TextSetColor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>color);</highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ab4bfa9dd0baec6930e537def549a3c3c" kindref="member">TextSetPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a852c9218ba58b6f69528688cd66b8c8d" kindref="member">TextSetString</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str);</highlight></codeline>
+<codeline lineno="58"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1addfce5c105d87e06757cfb0767320509" kindref="member">TextUpdate</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Font,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>FontSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bBold,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bItalic);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ab21b84d0bff0e2694df22377521dd4a7" kindref="member">BoxCreate</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dwColor,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShow);</highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a966506bc79f1c1ea7e861cf3d8e9fee3" kindref="member">BoxDestroy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a24c6ea42318df06bb620bfe31f4ee850" kindref="member">BoxSetShown</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShown);</highlight></codeline>
+<codeline lineno="86"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ac9f69a976130f0a9cadd27829c3c8c5b" kindref="member">BoxSetBorder</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShown);</highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a14a6078fe4330b26276a88527e4a582f" kindref="member">BoxSetBorderColor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dwColor);</highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a80246a06a1be196a27087a7640061935" kindref="member">BoxSetColor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dwColor);</highlight></codeline>
+<codeline lineno="104"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a1af1096819d6a555846ef248a8d79b32" kindref="member">BoxSetHeight</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ac90a1a2d169f8551cc35158fa6f30d69" kindref="member">BoxSetPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ad4db7ad8eb170d5e5d9d6a5cf76c18d4" kindref="member">BoxSetWidth</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ae873e234f72f2700241cc50d060790eb" kindref="member">LineCreate</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>color,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShow);</highlight></codeline>
+<codeline lineno="132"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1aa0a1b6f4a7942adcd03bd9bc903d3037" kindref="member">LineDestroy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a6396732d1bf250610d1fc3410014d494" kindref="member">LineSetShown</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShown);</highlight></codeline>
+<codeline lineno="144"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a78fffda532ef70476d2c5009d726027d" kindref="member">LineSetColor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>color);</highlight></codeline>
+<codeline lineno="150"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1afef34f9d01699f3871c08b17a24061db" kindref="member">LineSetWidth</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="159"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1acd7420990ec943ee90a20e9cae44c65f" kindref="member">LineSetPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y2);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1aa0249f5baafe70b2c76e895116d67207" kindref="member">ImageCreate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rotation,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>align,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShow);</highlight></codeline>
+<codeline lineno="174"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ad9b2885be1737107c306dd7a28d0fdfe" kindref="member">ImageDestroy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a2c86b5535fca61b62cb227bbd8512cf4" kindref="member">ImageSetShown</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bShown);</highlight></codeline>
+<codeline lineno="186"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a4636bfbe41107d038b86e9b210adbbe5" kindref="member">ImageSetAlign</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>align);</highlight></codeline>
+<codeline lineno="193"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1acf7a6d134cb1934051cc1f5d5d79c002" kindref="member">ImageSetPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="199"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ab993631e6cab7e55ae27153f0fa92f70" kindref="member">ImageSetRotation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rotation);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a16f7c09ae2830c97022b4a593b3a6c53" kindref="member">DestroyAllVisual</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1a6d169ae9b434211e6b0f1103b36900f3" kindref="member">ShowAllVisual</ref>();</highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ad5162dd9e6e7a838ff0cb29058c281e1" kindref="member">HideAllVisual</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="overlay_8h_1a9cc9377888d6702569639b1e8b67cc03" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="overlay_8h_1ac795b80115144e1e8944158f8b1c1aeb" kindref="member">SetParam</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*_szParamName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*_szParamValue);</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Mani/Desktop/doc/input/de/overlay.h"/>
+  </compounddef>
+</doxygen>
