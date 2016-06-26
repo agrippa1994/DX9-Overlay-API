@@ -6,4 +6,4 @@ An overlay API for DirectX 9 based games, which is licensed and distributed unde
 More information
 -------------
 
-http://www.overlay-api.net/
+http://agrippa1994.github.io/DX9-Overlay-API/
