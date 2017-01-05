@@ -7,3 +7,9 @@ More information
 -------------
 
 http://agrippa1994.github.io/DX9-Overlay-API/
+
+
+Wrappers
+-------------
+* [Java Wrapper](https://github.com/kevinpthorne/Java-DX9-Overlay-API) by [kevinpthorne](https://github.com/kevinpthorne)
+* [.NET Wrapper](https://github.com/JohnnyCrazy/DX9-Overlay-API-Wrapper) by [JohnnyCrazy](https://github.com/JohnnyCrazy)
