@@ -74,7 +74,7 @@ void Box::draw(IDirect3DDevice9 *pDevice)
 
 void Box::reset(IDirect3DDevice9 *pDevice)
 {
-	
+	m_renderStates.reset();
 }
 
 void Box::show()
@@ -91,6 +91,8 @@ void Box::releaseResourcesForDeletion(IDirect3DDevice9 *pDevice)
 {
 	m_bShown = false;
 	m_bBorderShown = false;
+
+	m_renderStates.reset();
 }
 
 bool Box::canBeDeleted()
@@ -100,10 +102,11 @@ bool Box::canBeDeleted()
 
 bool Box::loadResource(IDirect3DDevice9 *pDevice)
 {
+	m_renderStates = std::make_unique<RenderStates>(pDevice);
 	return true;
 }
 
 void Box::firstDrawAfterReset(IDirect3DDevice9 *pDevice)
 {
-	
+	loadResource(pDevice);
 }

@@ -2,7 +2,7 @@
 #include <d3dx9.h>
 
 #include "RenderBase.h"
-
+#include "RenderStates.h"
 class Line : public RenderBase
 {
 public:
@@ -34,4 +34,6 @@ private:
 	D3DCOLOR m_Color;
 
 	LPD3DXLINE m_Line;
+
+	std::unique_ptr<RenderStates> m_renderStates;
 };
