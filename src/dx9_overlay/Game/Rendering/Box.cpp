@@ -61,6 +61,8 @@ void Box::draw(IDirect3DDevice9 *pDevice)
 	if(!m_bShown)
 		return;
 
+	m_renderStates->BeginDraw(pDevice);
+
 	float x = (float)calculatedXPos(m_iX);
 	float y = (float)calculatedYPos(m_iY);
 	float w = (float)calculatedXPos(m_dwBoxWidth);
@@ -70,6 +72,8 @@ void Box::draw(IDirect3DDevice9 *pDevice)
 
 	if(m_bBorderShown)
 		Drawing::DrawRectangular(x, y, w, h, (float)m_dwBorderWidth, m_dwBorderColor, pDevice);
+
+	m_renderStates->EndDraw(pDevice);
 }
 
 void Box::reset(IDirect3DDevice9 *pDevice)
