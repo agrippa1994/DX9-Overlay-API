@@ -37,6 +37,8 @@ void Line::draw(IDirect3DDevice9 *pDevice)
 
 	D3DXVECTOR2	LinePos[2];
 
+	m_renderStates->BeginDraw(pDevice);
+
 	m_Line->SetAntialias(TRUE);
 	m_Line->SetWidth((FLOAT)m_Width);
 
@@ -48,7 +50,9 @@ void Line::draw(IDirect3DDevice9 *pDevice)
 	LinePos[1].y = (float)calculatedYPos(m_Y2);
 
 	m_Line->Draw(LinePos,2,m_Color);
-	m_Line->End();	
+	m_Line->End();
+
+	m_renderStates->EndDraw(pDevice);
 }
 
 void Line::reset(IDirect3DDevice9 *pDevice)
@@ -58,6 +62,8 @@ void Line::reset(IDirect3DDevice9 *pDevice)
 		m_Line->OnLostDevice();
 		m_Line->OnResetDevice();
 	}
+
+	m_renderStates.reset();
 }
 
 void Line::show()
@@ -77,6 +83,8 @@ void Line::releaseResourcesForDeletion(IDirect3DDevice9 *pDevice)
 		m_Line->Release();
 		m_Line = NULL;
 	}
+
+	m_renderStates.reset();
 }
 
 bool Line::canBeDeleted()
@@ -94,10 +102,12 @@ bool Line::loadResource(IDirect3DDevice9 *pDevice)
 
 	D3DXCreateLine(pDevice,&m_Line);
 
+	m_renderStates = std::make_unique<RenderStates>(pDevice);
+
 	return m_Line != NULL;
 }
 
 void Line::firstDrawAfterReset(IDirect3DDevice9 *pDevice)
 {
-
+	loadResource(pDevice);
 }

@@ -99,6 +99,7 @@
     <ClCompile Include="Game\Rendering\Line.cpp" />
     <ClCompile Include="Game\Rendering\RenderBase.cpp" />
     <ClCompile Include="Game\Rendering\Renderer.cpp" />
+    <ClCompile Include="Game\Rendering\RenderStates.cpp" />
     <ClCompile Include="Game\Rendering\Text.cpp" />
     <ClCompile Include="Utils\Serializer.cpp" />
     <ClCompile Include="Utils\Misc.cpp" />
@@ -119,6 +120,7 @@
     <ClInclude Include="Game\Rendering\Line.h" />
     <ClInclude Include="Game\Rendering\RenderBase.h" />
     <ClInclude Include="Game\Rendering\Renderer.h" />
+    <ClInclude Include="Game\Rendering\RenderStates.h" />
     <ClInclude Include="Game\Rendering\Text.h" />
     <ClInclude Include="Shared\Config.h" />
     <ClInclude Include="Shared\PipeMessages.h" />

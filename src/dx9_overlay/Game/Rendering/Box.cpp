@@ -61,6 +61,8 @@ void Box::draw(IDirect3DDevice9 *pDevice)
 	if(!m_bShown)
 		return;
 
+	m_renderStates->BeginDraw(pDevice);
+
 	float x = (float)calculatedXPos(m_iX);
 	float y = (float)calculatedYPos(m_iY);
 	float w = (float)calculatedXPos(m_dwBoxWidth);
@@ -70,11 +72,13 @@ void Box::draw(IDirect3DDevice9 *pDevice)
 
 	if(m_bBorderShown)
 		Drawing::DrawRectangular(x, y, w, h, (float)m_dwBorderWidth, m_dwBorderColor, pDevice);
+
+	m_renderStates->EndDraw(pDevice);
 }
 
 void Box::reset(IDirect3DDevice9 *pDevice)
 {
-	
+	m_renderStates.reset();
 }
 
 void Box::show()
@@ -91,6 +95,8 @@ void Box::releaseResourcesForDeletion(IDirect3DDevice9 *pDevice)
 {
 	m_bShown = false;
 	m_bBorderShown = false;
+
+	m_renderStates.reset();
 }
 
 bool Box::canBeDeleted()
@@ -100,10 +106,11 @@ bool Box::canBeDeleted()
 
 bool Box::loadResource(IDirect3DDevice9 *pDevice)
 {
+	m_renderStates = std::make_unique<RenderStates>(pDevice);
 	return true;
 }
 
 void Box::firstDrawAfterReset(IDirect3DDevice9 *pDevice)
 {
-	
+	loadResource(pDevice);
 }

@@ -6,6 +6,8 @@ namespace hello_world
     class Program
     {
         static int overlayText = -1;
+        static int overlayBox = -1;
+        static int overlayLine = -1;
 
         static void Main(string[] args)
         {
@@ -13,7 +15,9 @@ namespace hello_world
             DX9Overlay.SetParam("window", "GTA:SA:MP"); // Set the window name
 
             overlayText = DX9Overlay.TextCreate("Arial", 12, false, false, 200, 200, 0xFF00FFFF, "Hello world", true, true); // Initialize 'overlayText'
-            if(overlayText == -1)
+            overlayBox = DX9Overlay.BoxCreate(200, 200, 100, 100, 0x50FF00FF, true); // Initialize 'overlayBox'
+            overlayLine = DX9Overlay.LineCreate(0, 0, 300, 300, 5, 0xFFFFFFFF, true); // Initialize 'overlayLine'
+            if (overlayText == -1 || overlayBox == -1 || overlayLine == -1)
             {
                 Console.WriteLine("A error is occurred at the intializing.");
                 Console.WriteLine("Press any key to close the application!");
@@ -31,6 +35,8 @@ namespace hello_world
             }
 
             DX9Overlay.TextDestroy(overlayText); // Destroy text if the input is 'exit'
+            DX9Overlay.BoxDestroy(overlayBox); // Destroy box if the input is 'exit'
+            DX9Overlay.LineDestroy(overlayLine); // Destroy line if the input is 'exit'
         }
     }
 }

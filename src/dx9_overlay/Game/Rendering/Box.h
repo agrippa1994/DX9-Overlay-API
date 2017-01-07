@@ -2,6 +2,7 @@
 #include <d3dx9.h>
 
 #include "RenderBase.h"
+#include "RenderStates.h"
 
 class Box : public RenderBase
 {
@@ -35,4 +36,6 @@ private:
 	D3DCOLOR m_dwBoxColor, m_dwBorderColor;
 	DWORD m_dwBorderWidth, m_dwBoxWidth, m_dwBoxHeight;
 	int	m_iX, m_iY;
+
+	std::unique_ptr<RenderStates> m_renderStates;
 };
