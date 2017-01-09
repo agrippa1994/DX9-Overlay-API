@@ -5,7 +5,7 @@ PATH_OVERLAY := RelToAbs(A_ScriptDir, "..\..\bin\dx9_overlay.dll")
 hModule := DllCall("LoadLibrary", Str, PATH_OVERLAY)
 if(hModule == -1 || hModule == 0)
 {
-	MsgBox, 48, Error, The dll-file couldn't be found!
+	MsgBox, 48, Error, The dll-file couldn't be loaded!
 	ExitApp
 }
 
