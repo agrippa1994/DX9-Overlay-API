@@ -1,4 +1,4 @@
-#include <Utils/SafeBlock.h>
+﻿#include <Utils/SafeBlock.h>
 
 #include "Text.h"
 #include "dx_utils.h"
@@ -12,14 +12,33 @@ Text::Text(Renderer *renderer, const std::string& font,int iFontSize,bool Bold,b
 	setShadow(bShadow);
 	setShown(bShow);
 
+	m_Font = MultiByteToWide(font);
+	m_FontSize = iFontSize;
+	m_bBold = Bold;
+	m_bItalic = Italic;
+}
+
+Text::Text(Renderer *renderer, const std::wstring& font, int iFontSize, bool Bold, bool Italic, int x, int y, D3DCOLOR color, const std::wstring& text, bool bShadow, bool bShow)
+	: RenderBase(renderer), m_D3DFont(NULL)
+{
+	setPos(x, y);
+	setColor(color);
+	setText(text);
+	setShadow(bShadow);
+	setShown(bShow);
+
 	m_Font = font;
 	m_FontSize = iFontSize;
 	m_bBold = Bold;
 	m_bItalic = Italic;
 }
 
+bool Text::updateText(const std::string& Font, int FontSize, bool Bold, bool Italic)
+{
+	return updateText(MultiByteToWide(Font), FontSize, Bold, Italic);
+}
 
-bool Text::updateText(const std::string& Font,int FontSize,bool Bold,bool Italic)
+bool Text::updateText(const std::wstring& Font,int FontSize,bool Bold,bool Italic)
 {
 	m_Font = Font;
 	m_FontSize = FontSize;
@@ -32,7 +51,12 @@ bool Text::updateText(const std::string& Font,int FontSize,bool Bold,bool Italic
 
 void Text::setText(const std::string& str)
 {
-	m_Text = str;
+	setText(MultiByteToWide(str));
+}
+
+void Text::setText(const std::wstring& str)
+{
+	m_text = str;
 }
 
 void Text::setColor(D3DCOLOR color)
@@ -67,13 +91,15 @@ void Text::draw(IDirect3DDevice9 *pDevice)
 	{
 		const int shadowOffset = 1;
 
-		drawText(x - shadowOffset, y, D3DCOLOR_ARGB(255, 0, 0, 0), m_Text);
-		drawText(x + shadowOffset, y, D3DCOLOR_ARGB(255, 0, 0, 0), m_Text);
-		drawText(x, y - shadowOffset, D3DCOLOR_ARGB(255, 0, 0, 0), m_Text);
-		drawText(x, y + shadowOffset, D3DCOLOR_ARGB(255, 0, 0, 0), m_Text);
+		m_text = L"€";
+
+		drawText(x - shadowOffset, y, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
+		drawText(x + shadowOffset, y, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
+		drawText(x, y - shadowOffset, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
+		drawText(x, y + shadowOffset, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
 	}
 
-	drawText(x, y, m_Color, m_Text, D3DFONT_COLORTABLE);
+	drawText(x, y, m_Color, m_text, D3DFONT_COLORTABLE);
 }
 
 void Text::reset(IDirect3DDevice9 *pDevice)
@@ -112,6 +138,23 @@ void Text::firstDrawAfterReset(IDirect3DDevice9 *pDevice)
 	loadResource(pDevice);
 }
 
+std::wstring Text::MultiByteToWide(const std::string & multiByte)
+{
+	int length = multiByte.length();
+
+	if (length > 0)
+	{
+		auto nativeWideString = std::unique_ptr<wchar_t>(new wchar_t[length + 1]);
+		nativeWideString.get()[length] = '\0';
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, multiByte.c_str(), length, nativeWideString.get(), length);
+
+		std::wstring newString = std::wstring(nativeWideString.get());
+		return newString;
+	}
+
+	return std::wstring();
+}
+
 void Text::initFont(IDirect3DDevice9 *pDevice)
 {
 	int size = calculatedYPos(m_FontSize);
@@ -126,9 +169,9 @@ void Text::resetFont()
 	m_D3DFont.reset();
 }
 
-bool Text::drawText(int x, int y, DWORD dwColor, const std::string& strText, DWORD dwFlags /*= 0L*/)
+bool Text::drawText(int x, int y, DWORD dwColor, const std::wstring& strText, DWORD dwFlags /*= 0L*/)
 {
 	return safeExecuteWithValidation([&](){
-		m_D3DFont->DrawTextA((float)x, (float)y, dwColor, m_Text.c_str(), dwFlags);
+		m_D3DFont->DrawTextA((float)x, (float)y, dwColor, m_text.c_str(), dwFlags);
 	});
 }

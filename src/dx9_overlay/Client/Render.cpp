@@ -25,6 +25,21 @@ EXPORT int TextCreate(char *Font, int FontSize, bool bBold, bool bItalic, int x,
 	return -1;
 }
 
+EXPORT int TextCreateUnicode(wchar_t *Font, int FontSize, bool bBold, bool bItalic, int x, int y, unsigned int color, wchar_t *text, bool bShadow, bool bShow)
+{
+	SERVER_CHECK(-1)
+
+	Serializer serializerIn, serializerOut;
+
+	serializerIn << PipeMessages::TextCreateUnicode << std::wstring(Font) << FontSize << bBold << bItalic << x << y << color << std::wstring(text);
+	serializerIn << bShadow << bShow;
+
+	if (PipeClient(serializerIn, serializerOut).success())
+		SERIALIZER_RET(int);
+
+	return -1;
+}
+
 EXPORT int TextDestroy(int Id)
 {
 	SERVER_CHECK(0)
@@ -109,6 +124,20 @@ EXPORT int TextSetString(int id, char *str)
 	return 0;
 }
 
+EXPORT int TextSetStringUnicode(int id, wchar_t *str)
+{
+	SERVER_CHECK(0)
+
+	Serializer serializerIn, serializerOut;
+
+	serializerIn << PipeMessages::TextSetStringUnicode << id << std::wstring(str);
+
+	if (PipeClient(serializerIn, serializerOut).success())
+		SERIALIZER_RET(int);
+
+	return 0;
+}
+
 EXPORT int TextUpdate(int id, char *Font, int FontSize, bool bBold, bool bItalic)
 {
 	SERVER_CHECK(0)
@@ -116,6 +145,20 @@ EXPORT int TextUpdate(int id, char *Font, int FontSize, bool bBold, bool bItalic
 	Serializer serializerIn, serializerOut;
 
 	serializerIn << PipeMessages::TextUpdate << id << std::string(Font) << FontSize << bBold << bItalic;
+
+	if (PipeClient(serializerIn, serializerOut).success())
+		SERIALIZER_RET(int);
+
+	return 0;
+}
+
+int TextUpdateUnicode(int id, wchar_t * Font, int FontSize, bool bBold, bool bItalic)
+{
+	SERVER_CHECK(0)
+
+	Serializer serializerIn, serializerOut;
+
+	serializerIn << PipeMessages::TextUpdateUnicode << id << std::wstring(Font) << FontSize << bBold << bItalic;
 
 	if (PipeClient(serializerIn, serializerOut).success())
 		SERIALIZER_RET(int);

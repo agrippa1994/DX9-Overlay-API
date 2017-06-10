@@ -9,6 +9,8 @@ namespace DX9OverlayAPI
 
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
         public static extern int TextCreate(string font, int fontSize, bool bBold, bool bItalic, int x, int y, uint color, string text, bool bShadow, bool bShow);
+        [DllImport(PATH, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+        public static extern int TextCreateUnicode(string font, int fontSize, bool bBold, bool bItalic, int x, int y, uint color, string text, bool bShadow, bool bShow);
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
         public static extern int TextDestroy(int id);
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
@@ -21,8 +23,12 @@ namespace DX9OverlayAPI
         public static extern int TextSetPos(int id, int x, int y);
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
         public static extern int TextSetString(int id, string str);
+        [DllImport(PATH, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+        public static extern int TextSetStringUnicode(int id, string str);
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
         public static extern int TextUpdate(int id, string font, int fontSize, bool bBold, bool bItalic);
+        [DllImport(PATH, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+        public static extern int TextUpdateUnicode(int id, string font, int fontSize, bool bBold, bool bItalic);
 
         [DllImport(PATH, CallingConvention = CallingConvention.Cdecl)]
         public static extern int BoxCreate(int x, int y, int w, int h, uint dwColor, bool bShow);

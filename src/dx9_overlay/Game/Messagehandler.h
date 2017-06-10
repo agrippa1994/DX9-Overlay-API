@@ -5,13 +5,16 @@
 #include <functional>
 
 void TextCreate(Serializer& serializerIn, Serializer& serializerOut);
+void TextCreateUnicode(Serializer& serializerIn, Serializer& serializerOut);
 void TextDestroy(Serializer& serializerIn, Serializer& serializerOut);
 void TextSetShadow(Serializer& serializerIn, Serializer& serializerOut);
 void TextSetShown(Serializer& serializerIn, Serializer& serializerOut);
 void TextSetColor(Serializer& serializerIn, Serializer& serializerOut);
 void TextSetPos(Serializer& serializerIn, Serializer& serializerOut);
 void TextSetString(Serializer& serializerIn, Serializer& serializerOut);
+void TextSetStringUnicode(Serializer& serializerIn, Serializer& serializerOut);
 void TextUpdate(Serializer& serializerIn, Serializer& serializerOut);
+void TextUpdateUnicode(Serializer& serializerIn, Serializer& serializerOut);
 
 void BoxCreate(Serializer& serializerIn, Serializer& serializerOut);
 void BoxDestroy(Serializer& serializerIn, Serializer& serializerOut);
