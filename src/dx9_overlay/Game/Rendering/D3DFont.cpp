@@ -208,9 +208,6 @@ LPDIRECT3DTEXTURE9 CD3DFont::GetCharacterTexture(USHORT index)
 
 		m_pTexture[index]->UnlockRect(0);
 
-		std::string s = "C:\\Users\\media\\Documents\\GitHub\\DX9-Overlay-API\\bin\\" + std::to_string(index) + ".png";
-		D3DXSaveTextureToFile(s.c_str(), D3DXIMAGE_FILEFORMAT::D3DXIFF_PNG, m_pTexture[index], NULL);
-
 		// Done updating texture, so clean up used objects
 		DeleteObject(hbmBitmap);
 		DeleteDC(hDC);

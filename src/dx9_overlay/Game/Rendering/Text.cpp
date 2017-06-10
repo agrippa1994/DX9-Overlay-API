@@ -91,8 +91,6 @@ void Text::draw(IDirect3DDevice9 *pDevice)
 	{
 		const int shadowOffset = 1;
 
-		m_text = L"€";
-
 		drawText(x - shadowOffset, y, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
 		drawText(x + shadowOffset, y, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
 		drawText(x, y - shadowOffset, D3DCOLOR_ARGB(255, 0, 0, 0), m_text);
