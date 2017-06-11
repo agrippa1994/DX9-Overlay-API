@@ -51,8 +51,6 @@ std::shared_ptr<SharedFont> CD3DFont::GetFont(const std::wstring & fontName, DWO
 		// Check for existing font
 		if (tempFont != nullptr && tempFont->Compare(fontName, dwHeight, dwFlags))
 		{
-			std::string s = "Font exists!\n";
-			OutputDebugString(s.c_str());
 			font = tempFont;
 			break;
 		}
@@ -64,15 +62,9 @@ std::shared_ptr<SharedFont> CD3DFont::GetFont(const std::wstring & fontName, DWO
 
 		font = std::make_shared<SharedFont>(fontName, dwHeight, dwFlags);
 		sharedFonts.push_back(font);
-
-		std::string s = "Font not exists!\n";
-		OutputDebugString(s.c_str());
 	}
 
 	font->AddReference();
-
-	std::string s = "Get font: " + std::to_string(sharedFonts.size()) + "\n";
-	OutputDebugString(s.c_str());
 
 	return font;
 }
@@ -87,9 +79,6 @@ void CD3DFont::ReleaseFont(std::shared_ptr<SharedFont> font)
 		{
 			if (font->RemoveReference())
 				sharedFonts.erase(sharedFonts.begin() + i);
-
-			std::string s = "Removed font: " + std::to_string(sharedFonts.size()) + "\n";
-			OutputDebugString(s.c_str());
 
 			break;
 		}
