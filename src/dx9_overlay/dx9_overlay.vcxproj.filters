@@ -56,6 +56,9 @@
     <ClCompile Include="Game\Rendering\RenderStates.cpp">
       <Filter>Game\Rendering</Filter>
     </ClCompile>
+    <ClCompile Include="SharedFont.cpp">
+      <Filter>Game\Rendering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Client">
@@ -146,6 +149,9 @@
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="Game\Rendering\RenderStates.h">
+      <Filter>Game\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedFont.h">
       <Filter>Game\Rendering</Filter>
     </ClInclude>
   </ItemGroup>

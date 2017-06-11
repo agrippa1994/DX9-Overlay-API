@@ -11,6 +11,10 @@
 #include <D3D9.h>
 
 #include <string>
+#include <vector>
+#include <memory>
+
+#include "SharedFont.h"
 
 // Font creation flags
 #define D3DFONT_BOLD        0x0001
@@ -32,30 +36,20 @@
 //-----------------------------------------------------------------------------
 class CD3DFont
 {
-	// Font properties
-	std::wstring m_fontName;
-	DWORD   m_dwFontHeight;
-	DWORD   m_dwFontFlags;
+	static std::vector<std::shared_ptr<SharedFont>> sharedFonts;
+
+	static std::shared_ptr<SharedFont> GetFont(const std::wstring &fontName, DWORD dwHeight, DWORD dwFlags);
+	static void ReleaseFont(std::shared_ptr<SharedFont> font);
 
 	LPDIRECT3DDEVICE9       m_pd3dDevice; // A D3DDevice used for rendering
 	LPDIRECT3DVERTEXBUFFER9 m_pVB;        // VertexBuffer for rendering text
-	DWORD   m_dwTexWidth;                 // Texture dimensions
-	DWORD   m_dwTexHeight;
-	FLOAT   m_fTextScale;
-	DWORD   m_dwSpacing;                  // Character pixel spacing per side
 
 	// Stateblocks for setting and restoring render states
 	LPDIRECT3DSTATEBLOCK9 m_pStateBlockSaved;
 	LPDIRECT3DSTATEBLOCK9 m_pStateBlockDrawText;
 
-	HFONT m_font;
-	LPDIRECT3DTEXTURE9 m_pTexture[USHRT_MAX];
-	SIZE m_textureSize[USHRT_MAX];
-	
-	void InitializeFont();
-	void DestroyFont();
-	LPDIRECT3DTEXTURE9 GetCharacterTexture(USHORT index);
-
+	std::shared_ptr<SharedFont> m_font;
+	DWORD m_dwFlags;
 public:
 	// 2D and 3D text drawing functions
 	HRESULT DrawText(FLOAT x, FLOAT y, DWORD dwColor, const WCHAR* strText, DWORD dwFlags = 0L);
