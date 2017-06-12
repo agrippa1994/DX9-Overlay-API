@@ -11,14 +11,14 @@ namespace hello_world
 
         static void Main(string[] args)
         {
-            DX9Overlay.SetParam("use_window", "1"); // Use the window name to find the process
-            DX9Overlay.SetParam("window", "GTA:SA:MP"); // Set the window name
+            DX9Overlay.SetParam("process", "GFXTest32.exe"); // Set the process name
 
             DX9Overlay.DestroyAllVisual();
 
             overlayText = DX9Overlay.TextCreateUnicode("Arial", 12, false, false, 200, 200, 0xFF00FFFF, "Hello world!\n€ÖÜŒœЄϿ", true, true); // Initialize 'overlayText'
             overlayBox = DX9Overlay.BoxCreate(200, 200, 100, 100, 0x50FF00FF, true); // Initialize 'overlayBox'
             overlayLine = DX9Overlay.LineCreate(0, 0, 300, 300, 5, 0xFFFFFFFF, true); // Initialize 'overlayLine'
+
             if (overlayText == -1 || overlayBox == -1 || overlayLine == -1)
             {
                 Console.WriteLine("A error is occurred at the intializing.");

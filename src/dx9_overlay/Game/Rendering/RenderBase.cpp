@@ -27,14 +27,24 @@ void RenderBase::changeResource()
 	_resourceChanged = true;
 }
 
+float RenderBase::scaleX()
+{
+	return (float)_renderer->screenWidth() / (float)xCalculator;
+}
+
+float RenderBase::scaleY()
+{
+	return (float)_renderer->screenHeight() / (float)yCalculator;
+}
+
 int RenderBase::calculatedXPos(int x)
 {
-	return (int)(((float)x / (float)xCalculator) * (float)_renderer->screenWidth());
+	return (int)((float)x * scaleX());
 }
 
 int RenderBase::calculatedYPos(int y)
 {
-	return (int)(((float)y / (float)yCalculator) * (float)_renderer->screenHeight());
+	return (int)((float)y * scaleY());
 }
 
 Renderer *RenderBase::renderer()

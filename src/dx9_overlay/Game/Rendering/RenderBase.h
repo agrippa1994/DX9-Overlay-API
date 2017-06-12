@@ -31,6 +31,9 @@ protected:
 
 	void changeResource();
 
+	float scaleX();
+	float scaleY();
+
 	int calculatedXPos(int x);
 	int calculatedYPos(int y);
 
