@@ -47,7 +47,7 @@ void Drawing::DrawPrimtive(LPDIRECT3DDEVICE9 pDevice, D3DPRIMITIVETYPE Primitive
 	pDevice->SetFVF(dwOldFVF);
 }
 
-void Drawing::DrawSprite(LPD3DXSPRITE SpriteInterface, LPDIRECT3DTEXTURE9 TextureInterface, int PosX, int PosY, int Rotation, int Align)
+void Drawing::DrawSprite(LPD3DXSPRITE SpriteInterface, LPDIRECT3DTEXTURE9 TextureInterface, int PosX, int PosY, int Rotation, int Align, float scaleX, float scaleY)
 {
 	if (SpriteInterface == NULL || TextureInterface == NULL)
 		return;
@@ -59,7 +59,7 @@ void Drawing::DrawSprite(LPD3DXSPRITE SpriteInterface, LPDIRECT3DTEXTURE9 Textur
 	Vec.z = (FLOAT)0.0f;
 
 	D3DXMATRIX mat;
-	D3DXVECTOR2 scaling(1.0f, 1.0f);
+	D3DXVECTOR2 scaling(scaleX, scaleY);
 	D3DSURFACE_DESC desc;
 
 	TextureInterface->GetLevelDesc(0, &desc);

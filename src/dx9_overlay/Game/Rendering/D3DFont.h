@@ -10,6 +10,11 @@
 #include <tchar.h>
 #include <D3D9.h>
 
+#include <string>
+#include <vector>
+#include <memory>
+
+#include "SharedFont.h"
 
 // Font creation flags
 #define D3DFONT_BOLD        0x0001
@@ -31,29 +36,26 @@
 //-----------------------------------------------------------------------------
 class CD3DFont
 {
-	TCHAR   m_strFontName[80];            // Font properties
-	DWORD   m_dwFontHeight;
-	DWORD   m_dwFontFlags;
+	static std::vector<std::shared_ptr<SharedFont>> sharedFonts;
+
+	static std::shared_ptr<SharedFont> GetFont(const std::wstring &fontName, DWORD dwHeight, DWORD dwFlags);
+	static void ReleaseFont(std::shared_ptr<SharedFont> font);
 
 	LPDIRECT3DDEVICE9       m_pd3dDevice; // A D3DDevice used for rendering
-	LPDIRECT3DTEXTURE9      m_pTexture;   // The d3d texture for this font
 	LPDIRECT3DVERTEXBUFFER9 m_pVB;        // VertexBuffer for rendering text
-	DWORD   m_dwTexWidth;                 // Texture dimensions
-	DWORD   m_dwTexHeight;
-	FLOAT   m_fTextScale;
-	FLOAT   m_fTexCoords[128 - 32][4];
-	DWORD   m_dwSpacing;                  // Character pixel spacing per side
 
 	// Stateblocks for setting and restoring render states
 	LPDIRECT3DSTATEBLOCK9 m_pStateBlockSaved;
 	LPDIRECT3DSTATEBLOCK9 m_pStateBlockDrawText;
 
+	std::shared_ptr<SharedFont> m_font;
+	DWORD m_dwFlags;
 public:
 	// 2D and 3D text drawing functions
-	HRESULT DrawText(FLOAT x, FLOAT y, DWORD dwColor, const TCHAR* strText, DWORD dwFlags = 0L);
+	HRESULT DrawText(FLOAT x, FLOAT y, DWORD dwColor, const WCHAR* strText, DWORD dwFlags = 0L);
 
 	// Function to get extent of text
-	HRESULT GetTextExtent(const TCHAR* strText, SIZE* pSize);
+	HRESULT GetTextExtent(const WCHAR* strText, SIZE* pSize);
 
 	// Initializing and destroying device-dependent objects
 	HRESULT InitDeviceObjects(LPDIRECT3DDEVICE9 pd3dDevice);
@@ -63,7 +65,7 @@ public:
 
 	LPDIRECT3DDEVICE9 getDevice() const { return m_pd3dDevice; }
 	// Constructor / destructor
-	CD3DFont(const TCHAR* strFontName, DWORD dwHeight, DWORD dwFlags = 0L);
+	CD3DFont(const std::wstring &fontName, DWORD dwHeight, DWORD dwFlags = 0L);
 	~CD3DFont();
 };
 

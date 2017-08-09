@@ -2,13 +2,16 @@
 #define IMPORT extern "C" __declspec(dllimport)
 
 IMPORT int TextCreate(const char *Font, int FontSize, bool bBold, bool bItalic, int x, int y, unsigned int color, const char *text, bool bShadow, bool bShow);
+IMPORT int TextCreateUnicode(const wchar_t *Font, int FontSize, bool bBold, bool bItalic, int x, int y, unsigned int color, const wchar_t *text, bool bShadow, bool bShow);
 IMPORT int TextDestroy(int ID);
 IMPORT int TextSetShadow(int id, bool b);
 IMPORT int TextSetShown(int id, bool b);
 IMPORT int TextSetColor(int id, unsigned int color);
 IMPORT int TextSetPos(int id, int x, int y);
 IMPORT int TextSetString(int id, const char *str);
+IMPORT int TextSetStringUnicode(int id, const wchar_t *str);
 IMPORT int TextUpdate(int id, const char *Font, int FontSize, bool bBold, bool bItalic);
+IMPORT int TextUpdateUnicode(int id, const wchar_t *Font, int FontSize, bool bBold, bool bItalic);
 
 IMPORT int BoxCreate(int x, int y, int w, int h, unsigned int dwColor, bool bShow);
 IMPORT int BoxDestroy(int id);

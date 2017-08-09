@@ -56,9 +56,11 @@ void Image::draw(IDirect3DDevice9 *pDevice)
 
 	int x = calculatedXPos(m_x);
 	int y = calculatedYPos(m_y);
+	float sX = scaleX();
+	float sY = scaleY();
 
 	if(m_pTexture && m_pSprite)
-		Drawing::DrawSprite(m_pSprite, m_pTexture, x, y, m_rotation, m_align);
+		Drawing::DrawSprite(m_pSprite, m_pTexture, x, y, m_rotation, m_align, sX, sY);
 }
 
 void Image::reset(IDirect3DDevice9 *pDevice)

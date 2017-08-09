@@ -2,13 +2,16 @@
 #include "Client.h"
 
 EXPORT int TextCreate(char *Font, int FontSize, bool bBold, bool bItalic, int x, int y, unsigned int color, char *text, bool bShadow, bool bShow);
+EXPORT int TextCreateUnicode(wchar_t *Font, int FontSize, bool bBold, bool bItalic, int x, int y, unsigned int color, wchar_t *text, bool bShadow, bool bShow);
 EXPORT int TextDestroy(int ID);
 EXPORT int TextSetShadow(int id, bool b);
 EXPORT int TextSetShown(int id, bool b);
 EXPORT int TextSetColor(int id, unsigned int color);
 EXPORT int TextSetPos(int id, int x, int y);
 EXPORT int TextSetString(int id, char *str);
+EXPORT int TextSetStringUnicode(int id, wchar_t *str);
 EXPORT int TextUpdate(int id, char *Font, int FontSize, bool bBold, bool bItalic);
+EXPORT int TextUpdateUnicode(int id, wchar_t *Font, int FontSize, bool bBold, bool bItalic);
 
 EXPORT int BoxCreate(int x, int y, int w, int h, unsigned int dwColor, bool bShow);
 EXPORT int BoxDestroy(int id);

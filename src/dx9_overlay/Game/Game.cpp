@@ -56,13 +56,16 @@ void initGame()
 	MessagePaketHandler PaketHandler;
 
 	BIND(TextCreate);
+	BIND(TextCreateUnicode);
 	BIND(TextDestroy);
 	BIND(TextSetShadow);
 	BIND(TextSetShown);
 	BIND(TextSetColor);
 	BIND(TextSetPos);
 	BIND(TextSetString);
+	BIND(TextSetStringUnicode);
 	BIND(TextUpdate);
+	BIND(TextUpdateUnicode);
 
 	BIND(BoxCreate);
 	BIND(BoxDestroy);

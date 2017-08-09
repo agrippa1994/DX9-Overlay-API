@@ -28,6 +28,22 @@ void TextCreate(Serializer& serializerIn, Serializer& serializerOut)
 	WRITE(g_pRenderer.add(std::make_shared<Text>(&g_pRenderer, Font, FontSize, bBold, bItalic, x, y, color, string, bShadow, bShow)));
 }
 
+void TextCreateUnicode(Serializer& serializerIn, Serializer& serializerOut)
+{
+	READ(std::wstring, Font);
+	READ(int, FontSize);
+	READ(bool, bBold);
+	READ(bool, bItalic);
+	READ(int, x);
+	READ(int, y);
+	READ(unsigned int, color);
+	READ(std::wstring, string);
+	READ(bool, bShadow);
+	READ(bool, bShow);
+
+	WRITE(g_pRenderer.add(std::make_shared<Text>(&g_pRenderer, Font, FontSize, bBold, bItalic, x, y, color, string, bShadow, bShow)));
+}
+
 void TextDestroy(Serializer& serializerIn, Serializer& serializerOut)
 {
 	READ(int, id);
@@ -85,6 +101,16 @@ void TextSetString(Serializer& serializerIn, Serializer& serializerOut)
 	})));
 }
 
+void TextSetStringUnicode(Serializer& serializerIn, Serializer& serializerOut)
+{
+	READ(int, id);
+	READ(std::wstring, str);
+
+	WRITE(int(safeExecuteWithValidation([&]() {
+		g_pRenderer.getAs<Text>(id)->setText(str);
+	})));
+}
+
 void TextUpdate(Serializer& serializerIn, Serializer& serializerOut)
 {
 	READ(int, id); 
@@ -94,6 +120,19 @@ void TextUpdate(Serializer& serializerIn, Serializer& serializerOut)
 	READ(bool, bItalic);
 
 	WRITE(int(safeExecuteWithValidation([&](){
+		g_pRenderer.getAs<Text>(id)->updateText(Font, FontSize, bBold, bItalic);
+	})));
+}
+
+void TextUpdateUnicode(Serializer& serializerIn, Serializer& serializerOut)
+{
+	READ(int, id);
+	READ(std::wstring, Font);
+	READ(int, FontSize);
+	READ(bool, bBold);
+	READ(bool, bItalic);
+
+	WRITE(int(safeExecuteWithValidation([&]() {
 		g_pRenderer.getAs<Text>(id)->updateText(Font, FontSize, bBold, bItalic);
 	})));
 }
